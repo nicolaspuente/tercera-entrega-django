@@ -44,40 +44,41 @@ El proyecto está dividido en distintas aplicaciones:
 - **messenger**: permite el envío y recepción de mensajes entre usuarios  
 
 ---
+git add .
 
 ## Cómo ejecutar el proyecto
 
 1. Clonar el repositorio  
 
 2. Crear un entorno virtual  
-
+```bash
 python -m venv venv
-
+```
 
 3. Activar el entorno virtual  
-
+```bash
 venv\Scripts\activate
-
+```
 
 4. Instalar las dependencias  
-
+```bash
 pip install -r requirements.txt
-
+```
 
 5. Aplicar migraciones  
-
+```bash
 python manage.py migrate
-
+```
 
 6. Ejecutar el servidor  
-
+```bash
 python manage.py runserver
-
+```
 
 7. Abrir en el navegador  
-
+```txt
 http://127.0.0.1:8000/
-
+```
 
 ---
 
