@@ -1,3 +1,5 @@
+{% extends 'app/base.html' %}
+{% block contenido %}
 <h1>Crear página</h1>
 
 <form method="post" enctype="multipart/form-data">
@@ -9,3 +11,4 @@
 
 <br>
 <a href="{% url 'pages' %}">Volver</a>
+{% endblock %}

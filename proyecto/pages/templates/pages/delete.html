@@ -1,3 +1,5 @@
+{% extends 'app/base.html' %}
+{% block contenido %}
 <h1>¿Estás seguro que querés borrar esta página?</h1>
 
 <form method="post">
@@ -7,3 +9,4 @@
 
 <br>
 <a href="{% url 'pages' %}">Cancelar</a>
+{% endblock %}

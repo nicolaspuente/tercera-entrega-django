@@ -5,8 +5,23 @@
     <title>Mi proyecto Django</title>
 </head>
 <body>
+
     <h1>Proyecto Django</h1>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/pages/">Pages</a>
+        <a href="/accounts/login/">Login</a>
+        <a href="/accounts/signup/">Registro</a>
+        <a href="/accounts/profile/">Perfil</a>
+        <a href="/messages/">Mensajes</a>
+    </nav>
+
+    <hr>
+
     {% block contenido %}
     {% endblock %}
+
 </body>
 </html>

@@ -10,7 +10,9 @@ def register(request):
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
         if form.is_valid():
-            user = form.save()
+            user = form.save(commit=False)
+            user.set_password(form.cleaned_data['password'])
+            user.save()
             login(request, user)
             return redirect('inicio')
     else:
@@ -41,7 +43,7 @@ def profile(request):
 
     if request.method == 'POST':
         user_form = UserUpdateForm(request.POST, instance=request.user)
-        perfil_form = PerfilUpdateForm(request.POST, request.FILES, instance=request.user.perfil)
+        perfil_form = PerfilUpdateForm(request.POST, request.FILES, instance=perfil)
 
         if user_form.is_valid() and perfil_form.is_valid():
             user_form.save()

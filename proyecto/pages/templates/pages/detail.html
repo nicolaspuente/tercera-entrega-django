@@ -1,3 +1,5 @@
+{% extends 'app/base.html' %}
+{% block contenido %}
 <h1>{{ object.titulo }}</h1>
 <h3>{{ object.subtitulo }}</h3>
 
@@ -17,3 +19,4 @@
 <a href="{% url 'pages' %}">Volver</a>
 <a href="{% url 'page_update' object.pk %}">Editar</a>
 <a href="{% url 'page_delete' object.pk %}">Borrar</a>
+{% endblock %}
