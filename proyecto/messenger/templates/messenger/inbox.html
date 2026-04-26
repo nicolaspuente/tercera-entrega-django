@@ -1,0 +1,16 @@
+<h1>Bandeja de entrada</h1>
+
+<a href="{% url 'enviar_mensaje' %}">Enviar mensaje</a>
+
+{% if mensajes %}
+    {% for m in mensajes %}
+        <div>
+            <p><b>De:</b> {{ m.emisor }}</p>
+            <p><b>Asunto:</b> {{ m.asunto }}</p>
+            <p>{{ m.cuerpo }}</p>
+            <hr>
+        </div>
+    {% endfor %}
+{% else %}
+    <p>No tenés mensajes</p>
+{% endif %}

@@ -1,0 +1,13 @@
+<h1>Perfil</h1>
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ user_form.as_p }}
+    {{ perfil_form.as_p }}
+
+    <button type="submit">Guardar cambios</button>
+</form>
+
+<br>
+<a href="{% url 'password_change' %}">Cambiar contraseña</a>
+<a href="{% url 'logout' %}">Cerrar sesión</a>
